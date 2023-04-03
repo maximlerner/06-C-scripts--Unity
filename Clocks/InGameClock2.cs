@@ -8,6 +8,7 @@ public class InGameClock2 : MonoBehaviour
 {
     public Text clockText;
     public GameObject sun;
+    private float speed = 12.0f;
     public int day = 0;
 
     //private float timer = 35400f;
@@ -21,7 +22,7 @@ public class InGameClock2 : MonoBehaviour
             timer -= 86400f;
             day += 1;
         }
-        timer += Time.deltaTime * 3600;
+        timer += Time.deltaTime * speed;
         DisplayTime();
     }
 
