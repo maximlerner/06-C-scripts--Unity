@@ -8,7 +8,7 @@ public class InGameClock2 : MonoBehaviour
 {
     public Text clockText;
     public GameObject sun;
-    private float speed = 12.0f;
+    private float speed = 60f;
     public int day = 0;
 
     //private float timer = 35400f;
@@ -33,7 +33,7 @@ public class InGameClock2 : MonoBehaviour
         int seconds = Mathf.FloorToInt(timer - minutes * 60 -hours * 60.0f * 60.0f);
         clockText.text = string.Format("{0:00}:{1:00}:{2:00}",hours, minutes, seconds);
 
-        sun.transform.localEulerAngles = new Vector3(0, 0, hours / 24.0f * -360.0f);
+        sun.transform.localEulerAngles = new Vector3(hours, 0, 0 / 24.0f * -360.0f);
     }
 
 }
